@@ -13,6 +13,7 @@
 		0C8599F722CD13D500B6D6E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C8599F522CD13D500B6D6E9 /* LaunchScreen.storyboard */; };
 		0C8599FA22CD13D500B6D6E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8599F922CD13D500B6D6E9 /* main.m */; };
 		0C859A0922CD17DA00B6D6E9 /* AJDWPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C859A0822CD17DA00B6D6E9 /* AJDWPost.m */; };
+		0C859A0C22CD1E4800B6D6E9 /* AJDWPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C859A0B22CD1E4800B6D6E9 /* AJDWPostController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		0C8599F922CD13D500B6D6E9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0C859A0722CD17DA00B6D6E9 /* AJDWPost.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AJDWPost.h; sourceTree = "<group>"; };
 		0C859A0822CD17DA00B6D6E9 /* AJDWPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AJDWPost.m; sourceTree = "<group>"; };
+		0C859A0A22CD1E4800B6D6E9 /* AJDWPostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AJDWPostController.h; sourceTree = "<group>"; };
+		0C859A0B22CD1E4800B6D6E9 /* AJDWPostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AJDWPostController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 		0C859A0622CD147E00B6D6E9 /* MODEL CONTROLLERS */ = {
 			isa = PBXGroup;
 			children = (
+				0C859A0A22CD1E4800B6D6E9 /* AJDWPostController.h */,
+				0C859A0B22CD1E4800B6D6E9 /* AJDWPostController.m */,
 			);
 			path = "MODEL CONTROLLERS";
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 				0C8599FA22CD13D500B6D6E9 /* main.m in Sources */,
 				0C8599EC22CD13D400B6D6E9 /* AppDelegate.m in Sources */,
 				0C859A0922CD17DA00B6D6E9 /* AJDWPost.m in Sources */,
+				0C859A0C22CD1E4800B6D6E9 /* AJDWPostController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

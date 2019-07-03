@@ -12,6 +12,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AJDWPost : NSObject
 
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *name;
+
+-(instancetype)initWithTitle:(NSString *)title name:(NSString *)name;
+
+@end
+
+@interface AJDWPost (JSONConvertable)
+
+-(instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end
 
 NS_ASSUME_NONNULL_END
