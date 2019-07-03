@@ -14,8 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *image;
 
--(instancetype)initWithTitle:(NSString *)title name:(NSString *)name;
+-(instancetype)initWithTitle:(NSString *)title
+                        name:(NSString *)name
+image:(NSString *)image;
 
 @end
 

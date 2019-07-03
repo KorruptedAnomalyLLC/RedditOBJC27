@@ -40,10 +40,13 @@ class PostTableViewController: UITableViewController {
 
         let post = AJDWPostController.shared().posts[indexPath.row]
         
-        cell?.titleLabel?.text = post.title
-        cell?.nameLabel?.text = post.name
-        // Configure the cell...
-
+        AJDWPostController.shared().fetchImage(post) { (image) in
+            DispatchQueue.main.async {
+                cell?.titleLabel.text = post.title
+                cell?.nameLabel.text = post.name
+                cell?.postImageView.image = image
+            }
+        }
         return cell ?? UITableViewCell()
     }
     

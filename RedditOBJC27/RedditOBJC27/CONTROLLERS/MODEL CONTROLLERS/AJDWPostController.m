@@ -30,8 +30,8 @@ static NSString * const baseURL = @"https://www.reddit.com";
     NSURL *url = [NSURL URLWithString:baseURL];
     
     NSURL *finalURL = [[[url URLByAppendingPathComponent:@"r"]
-      URLByAppendingPathComponent:@"funny"]
-     URLByAppendingPathExtension:@"json"];
+                        URLByAppendingPathComponent:@"funny"]
+                       URLByAppendingPathExtension:@"json"];
     
     NSLog(@"%@", finalURL);
     
@@ -71,6 +71,29 @@ static NSString * const baseURL = @"https://www.reddit.com";
         AJDWPostController.sharedController.posts = tempArray;
         completion(true);
     }] resume];
+    
+}
+
+- (void)fetchImage:(AJDWPost *)postToFetchImage completion:(void (^)(UIImage *))completion
+{
+    NSURL *imageURL = [NSURL URLWithString: postToFetchImage.image];
+    
+    [[[NSURLSession sharedSession] dataTaskWithURL:imageURL  completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"Error fetching image for post: %@", error);
+            completion(nil);
+            return;
+        }
+        
+        if (!data) {
+            NSLog(@"Error with fetched image post data");
+            completion(nil);
+            return;
+        }
+        UIImage *postImage = [UIImage imageWithData:data];
+        completion(postImage);
+        
+    }] resume ];
     
 }
 

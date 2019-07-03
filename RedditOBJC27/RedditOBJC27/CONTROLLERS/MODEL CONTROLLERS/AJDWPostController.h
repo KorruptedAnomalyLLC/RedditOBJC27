@@ -6,8 +6,9 @@
 //  Copyright © 2019 Austin West. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 #import "AJDWPost.h"
+
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -22,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 // Crud Functions
 // Fetch Posts
 -(void)fetchPosts:(void (^)(BOOL))completion;
+
+-(void)fetchImage:(AJDWPost *)postToFetchImage completion: (void(^) (UIImage *))completion;
 
 @end
 

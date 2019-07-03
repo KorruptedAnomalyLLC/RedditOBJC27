@@ -10,12 +10,13 @@
 
 @implementation AJDWPost
 
-- (instancetype)initWithTitle:(NSString *)title name:(NSString *)name {
+- (instancetype)initWithTitle:(NSString *)title name:(NSString *)name image:(nonnull NSString *)image {
     
     self = [super init];
     if (self) {
         _title = title;
         _name = name;
+        _image = image;
     }
     return self;
 }
@@ -26,9 +27,11 @@
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     NSString *title = dictionary[@"title"];
-    NSString *name = dictionary[@"name"];
+    NSString *name = dictionary[@"author"];
+    NSString *image = dictionary[@"thumbnail"];
     
-    return [self initWithTitle:title name:name];
+    
+    return [self initWithTitle:title name:name image:image];
 }
 
 @end
