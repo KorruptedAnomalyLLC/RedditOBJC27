@@ -7,10 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AJDWPost.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AJDWPostController : NSObject
+
+// Singleton
++(instancetype)sharedController;
+
+// Source of truth
+@property (nonatomic, copy) NSArray<AJDWPostController *> *posts;
+
+// Crud Functions
+// Fetch Posts
+-(void)fetchPosts:(void (^)(BOOL))completion;
 
 @end
 
