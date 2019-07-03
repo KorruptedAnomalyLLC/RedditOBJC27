@@ -12,39 +12,40 @@
         <!--Reddit-->
         <scene sceneID="UVv-eL-qli">
             <objects>
-                <tableViewController id="Ur1-jV-TNA" sceneMemberID="viewController">
+                <tableViewController id="Ur1-jV-TNA" customClass="PostTableViewController" customModule="RedditOBJC27" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="0dW-kt-km5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.34260075365972442" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="qFE-rv-d8I">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="150" id="qFE-rv-d8I" customClass="PostTableViewCell" customModule="RedditOBJC27" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qFE-rv-d8I" id="Ck3-Sd-TGN">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="R7Q-dH-uHy">
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="R7Q-dH-uHy">
                                             <rect key="frame" x="8" y="8" width="398" height="133.5"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PTA-pK-tv2">
                                                     <rect key="frame" x="0.0" y="0.0" width="133.5" height="133.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="PTA-pK-tv2" secondAttribute="height" multiplier="1:1" id="ZIw-d8-iZT"/>
+                                                        <constraint firstAttribute="height" constant="133.5" id="jUg-CY-TPY"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ogI-RS-6Nn">
-                                                    <rect key="frame" x="137.5" y="0.0" width="260.5" height="133.5"/>
+                                                    <rect key="frame" x="137.5" y="46.5" width="260.5" height="41"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(titleLabel)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4FJ-fr-mcH">
-                                                            <rect key="frame" x="0.0" y="0.0" width="260.5" height="113"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="260.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.094605518590000007" green="0.81193329020000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="(nameLabel)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rcj-Q4-fJ0">
-                                                            <rect key="frame" x="0.0" y="113" width="260.5" height="20.5"/>
+                                                            <rect key="frame" x="0.0" y="20.5" width="260.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.094605518590000007" green="0.81193329020000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
@@ -62,6 +63,11 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.3736549139" blue="0.047485314610000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <connections>
+                                    <outlet property="nameLabel" destination="Rcj-Q4-fJ0" id="IBq-en-2Jq"/>
+                                    <outlet property="postImageView" destination="PTA-pK-tv2" id="CkW-H8-QfN"/>
+                                    <outlet property="titleLabel" destination="4FJ-fr-mcH" id="5bS-XB-oEf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

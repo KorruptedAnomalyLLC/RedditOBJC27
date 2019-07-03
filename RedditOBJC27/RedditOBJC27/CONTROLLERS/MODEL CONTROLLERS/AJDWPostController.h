@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(instancetype)sharedController;
 
 // Source of truth
-@property (nonatomic, copy) NSArray<AJDWPostController *> *posts;
+@property (nonatomic, copy) NSArray<AJDWPost *> *posts;
 
 // Crud Functions
 // Fetch Posts

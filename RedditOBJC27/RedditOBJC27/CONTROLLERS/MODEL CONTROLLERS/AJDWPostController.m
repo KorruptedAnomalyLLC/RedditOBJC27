@@ -29,13 +29,13 @@ static NSString * const baseURL = @"https://www.reddit.com";
     
     NSURL *url = [NSURL URLWithString:baseURL];
     
-    [[[url URLByAppendingPathComponent:@"r"]
+    NSURL *finalURL = [[[url URLByAppendingPathComponent:@"r"]
       URLByAppendingPathComponent:@"funny"]
      URLByAppendingPathExtension:@"json"];
     
-    NSLog(@"%@", url);
+    NSLog(@"%@", finalURL);
     
-    [[[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    [[[NSURLSession sharedSession] dataTaskWithURL:finalURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (error) {
             NSLog(@"Error fetching post: %@", error);
             completion(false);

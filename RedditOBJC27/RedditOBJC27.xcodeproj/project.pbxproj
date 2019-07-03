@@ -14,6 +14,8 @@
 		0C8599FA22CD13D500B6D6E9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8599F922CD13D500B6D6E9 /* main.m */; };
 		0C859A0922CD17DA00B6D6E9 /* AJDWPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C859A0822CD17DA00B6D6E9 /* AJDWPost.m */; };
 		0C859A0C22CD1E4800B6D6E9 /* AJDWPostController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C859A0B22CD1E4800B6D6E9 /* AJDWPostController.m */; };
+		0C859A0F22CD298700B6D6E9 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C859A0E22CD298700B6D6E9 /* PostTableViewController.swift */; };
+		0C859A1122CD3C2E00B6D6E9 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C859A1022CD3C2E00B6D6E9 /* PostTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,9 @@
 		0C859A0822CD17DA00B6D6E9 /* AJDWPost.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AJDWPost.m; sourceTree = "<group>"; };
 		0C859A0A22CD1E4800B6D6E9 /* AJDWPostController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AJDWPostController.h; sourceTree = "<group>"; };
 		0C859A0B22CD1E4800B6D6E9 /* AJDWPostController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AJDWPostController.m; sourceTree = "<group>"; };
+		0C859A0D22CD298600B6D6E9 /* RedditOBJC27-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RedditOBJC27-Bridging-Header.h"; sourceTree = "<group>"; };
+		0C859A0E22CD298700B6D6E9 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
+		0C859A1022CD3C2E00B6D6E9 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				0C859A0122CD142100B6D6E9 /* STORYBOARDS */,
+				0C859A1022CD3C2E00B6D6E9 /* PostTableViewCell.swift */,
 			);
 			path = VIEWS;
 			sourceTree = "<group>";
@@ -119,6 +125,8 @@
 		0C859A0522CD147500B6D6E9 /* VIEW CONTROLLERS */ = {
 			isa = PBXGroup;
 			children = (
+				0C859A0E22CD298700B6D6E9 /* PostTableViewController.swift */,
+				0C859A0D22CD298600B6D6E9 /* RedditOBJC27-Bridging-Header.h */,
 			);
 			path = "VIEW CONTROLLERS";
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 				TargetAttributes = {
 					0C8599E622CD13D400B6D6E9 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -203,10 +212,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C859A0F22CD298700B6D6E9 /* PostTableViewController.swift in Sources */,
 				0C8599FA22CD13D500B6D6E9 /* main.m in Sources */,
 				0C8599EC22CD13D400B6D6E9 /* AppDelegate.m in Sources */,
 				0C859A0922CD17DA00B6D6E9 /* AJDWPost.m in Sources */,
 				0C859A0C22CD1E4800B6D6E9 /* AJDWPostController.m in Sources */,
+				0C859A1122CD3C2E00B6D6E9 /* PostTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Z9AZ3J86W;
 				INFOPLIST_FILE = "$(SRCROOT)/RedditOBJC27/RESOURCES/Info.plist";
@@ -357,6 +369,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AustinWest.RedditOBJC27;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RedditOBJC27/CONTROLLERS/VIEW CONTROLLERS/RedditOBJC27-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -365,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5Z9AZ3J86W;
 				INFOPLIST_FILE = "$(SRCROOT)/RedditOBJC27/RESOURCES/Info.plist";
@@ -374,6 +390,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.AustinWest.RedditOBJC27;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RedditOBJC27/CONTROLLERS/VIEW CONTROLLERS/RedditOBJC27-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
